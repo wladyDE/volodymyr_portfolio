@@ -73,7 +73,7 @@
 
     .about__me {
         width: 50%;
-        margin: 2rem auto -4rem;
+        margin: 2rem auto 4rem;
     }
 
     .about__content p {
@@ -90,7 +90,7 @@
     }
 
     .about__cards {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap : 1rem; 
     }
 

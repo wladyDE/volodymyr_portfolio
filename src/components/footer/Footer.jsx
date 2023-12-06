@@ -5,23 +5,23 @@ import { BsWhatsapp } from 'react-icons/bs'
 import {FaGithub} from 'react-icons/fa'
 import './footer.css'
 
-const Footer = () => {
+const Footer = ({setActiveNav}) => {
   return (
     <footer>
       <a href="#" className='footer__logo'>VOLODYMYR</a>
       <ul className="permalinks">
-        <li><a href="#">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="experience">Experience</a></li>
-        <li><a href="portfolio">Portfolio</a></li>
-        <li><a href="contact">Contact</a></li>
+        <li><a href="#header" onClick={() => setActiveNav('#header')}>Home</a></li>
+        <li><a href="#about" onClick={() => setActiveNav('#about')}>About</a></li>
+        <li><a href="#experience" onClick={() => setActiveNav('#experience')}>Experience</a></li>
+        <li><a href="#portfolio" onClick={() => setActiveNav('#portfolio')}>Portfolio</a></li>
+        <li><a href="#contact" onClick={() => setActiveNav('#contact')}>Contact</a></li>
       </ul>
 
       <div className="footer__socials">
-        <a href=""><MdOutlineEmail/></a>
-        <a href=""><FaTelegramPlane/></a>
-        <a href=""><BsWhatsapp/></a>
-        <a href=""><FaGithub/></a>
+        <a href="mailto:vovawestland@gmail.com"><MdOutlineEmail/></a>
+        <a href="https://t.me/wladyde97"><FaTelegramPlane/></a>
+        <a href="https://api.whatsapp.com/send?phone=+4915906463661"><BsWhatsapp/></a>
+        <a href="https://github.com/wladyDE"><FaGithub/></a>
       </div>
 
       <div className="footer__copyright">

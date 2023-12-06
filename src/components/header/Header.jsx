@@ -4,9 +4,9 @@ import CTA from './CTA'
 import ME from '../../assets/me2.png'
 import HeaderSocials from './HeaderSocials'
 
-const Header = () => {
+const Header = ({setActiveNav}) => {
   return (
-    <header className='header'>
+    <header className='header' id='header'>
       <div className="container header__container">
         <h5>Hello I'm</h5>
         <h1>Volodymyr Havryliuk</h1>
@@ -18,7 +18,7 @@ const Header = () => {
         </div>
 
         <HeaderSocials />
-        <a href="#concat" className='scroll__down'>Scroll Down</a>
+        <a href="#contact" className='scroll__down' onClick={() => setActiveNav('#contact')}>Scroll Down</a>
 
 
       </div>

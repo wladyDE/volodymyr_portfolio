@@ -52,12 +52,12 @@ const Contact = () => {
             <FaTelegramPlane className='contact__option-icon' />
             <h4>Telegram</h4>
             <h5>Volodymr Havryliuk</h5>
-            <a href="mailto:vovawestland@gmail.com" target='_blank'>Send a message</a>
+            <a href="https://t.me/wladyde97" target='_blank'>Send a message</a>
           </article>
           <article className="contact__option">
             <BsWhatsapp className='contact__option-icon' />
             <h4>WhatsApp</h4>
-            <h5>vovawestland@gmail.com</h5>
+            <h5>Volodymyr Havryliuk</h5>
             <a href="https://api.whatsapp.com/send?phone=+4915906463661" target='_blank'>Send a message</a>
           </article>
         </div>
