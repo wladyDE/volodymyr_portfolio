@@ -54,6 +54,21 @@ textarea {
     color: var(--color-white);
 }
 
+.contact__success {
+    color: var(--color-primary);
+    margin-top: 5px;
+}
+
+.contact__error {
+    margin-top: 5px;
+    color: brown;
+}
+
+.form__submit{
+    display: flex;
+    gap: 1rem;
+}
+
 /*  =================== MEDIA QUERIES (MEDIUM DEFVICES) ===================== */
 
 @media screen and (max-width : 1024px) {
