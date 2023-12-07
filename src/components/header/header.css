@@ -63,6 +63,28 @@
     font-size: 0.9rem;
 }
 
+/* ============= LANGUAGE BTN ============= */
+
+.language-switch {
+    display: flex; 
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 8rem;
+    margin: 0 auto 1rem auto; 
+  }
+  
+  .language-switch__option {
+    flex: 1; 
+    text-align: center;
+    padding: 5px 10px;
+    transition: background-color 0.5s, color 0.5s;
+    user-select: none; 
+  }
+  
+  
+
 /*  =================== MEDIA QUERIES (MEDIUM DEFVICES) ===================== */
 
 @media screen and (max-width : 1024px){

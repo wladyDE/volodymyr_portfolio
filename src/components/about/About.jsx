@@ -5,11 +5,11 @@ import { FaAward } from 'react-icons/fa'
 import { GrLanguage } from "react-icons/gr";
 import { FaHeart } from "react-icons/fa";
 
-const About = ({setActiveNav}) => {
+const About = ({setActiveNav, language: {about}}) => {
   return (
     <section id='about'>
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
+      <h5>{about.getToKnow}</h5>
+      <h2>{about.title}</h2>
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-img">
@@ -21,26 +21,26 @@ const About = ({setActiveNav}) => {
           <div className="about__cards">
             <article className='about__card'>
               <FaAward className="about-icon" />
-              <h5>Apprenticeship</h5>
+              <h5>{about.occupation}</h5>
               <small>Quinscape GmbH</small>
             </article>
             <article className='about__card'>
               <GrLanguage className="about-icon" />
-              <h5>Languages</h5>
-              <small>Eng Ger Ukr Rus</small>
+              <h5>{about.languagesTitle}</h5>
+              <small>{about.languages}</small>
             </article>
             <article className='about__card'>
               <FaHeart className="about-icon" />
               <h5>Hobbys</h5>
-              <small>Fitness, Cold-water swimming</small>
+              <small>{about.hobbys}</small>
             </article>
           </div>
 
           <p>
-          I am currently in my second year of apprenticeship as an IT specialist at Quinscape GmbH. With over two years of passion in the IT field, I am proficiently developing skills in both backend and frontend development, alongside web scraping. My experience includes hands-on work in various projects. In my leisure time, I enjoy training and the invigorating experience of cold-water swimming
+          {about.aboutMe}
           </p>
 
-          <a href="#contact" className='btn btn-primary' onClick={() => setActiveNav('#contact')}>Let's talk</a>
+          <a href="#contact" className='btn btn-primary' onClick={() => setActiveNav('#contact')}>{about.letsTalk}</a>
         </div>
       </div>
     </section>

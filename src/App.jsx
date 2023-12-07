@@ -6,9 +6,11 @@ import Experience from './components/experience/Experience.jsx'
 import Portfolio from './components/portfolio/Portfolio.jsx'; 
 import Contact from './components/contact/Contact.jsx'; 
 import Footer from './components/footer/Footer.jsx'; 
+import {eng} from './translations/translations.js'
 
 const App = () => {
   const [activeNav, setActiveNav] = useState('#header')
+  const [language, setLanguage] = useState(eng)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,13 +35,13 @@ const App = () => {
 
   return (
     <>
-      <Header setActiveNav={setActiveNav}/>
+      <Header setActiveNav={setActiveNav} language={language} setLanguage={setLanguage}/>
       <Nav activeNav={activeNav} setActiveNav={setActiveNav}/>
-      <About setActiveNav={setActiveNav}/>
-      <Experience/>
-      <Portfolio/>
-      <Contact/>
-      <Footer setActiveNav={setActiveNav}/>
+      <About setActiveNav={setActiveNav} language={language}/>
+      <Experience language={language}/>
+      <Portfolio language={language}/>
+      <Contact language={language}/>
+      <Footer setActiveNav={setActiveNav} language={language}/>
     </>
   )
 }
