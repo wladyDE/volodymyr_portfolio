@@ -1,45 +1,52 @@
 import React from 'react'
 import './portfolio.css'
-import IMG1 from '../../assets/portfolio1.jpg'
-import IMG2 from '../../assets/portfolio2.jpg'
-import IMG3 from '../../assets/portfolio3.jpg'
-import IMG4 from '../../assets/portfolio4.jpg'
-import IMG5 from '../../assets/portfolio5.png'
+import BuffOrderChangerImg from '../../assets/portfolio1.png'
+import FitConnectImg from '../../assets/portfolio2.png'
+import KingGymImg from '../../assets/portfolio3.png'
+import TicTacToeImg from '../../assets/portfolio4.png'
+import MarvelImg from '../../assets/portfolio5.png'
+import DataServImg from '../../assets/portfolio7.png'
+import SkinportImg from '../../assets/portfolio6.png'
 
 const data = [
   {
     id: 1,
-    image: IMG1,
-    title: 'Crypto connect',
-    github: ''
+    image: FitConnectImg,
+    title: 'FitConnect',
+    github: 'https://github.com/wladyDE/FitConnect'
   },
   {
     id: 2,
-    image: IMG2,
-    title: 'Crypto connect',
-    github: ''
+    image: TicTacToeImg,
+    title: 'Tic-Tac-Toe',
+    github: 'https://github.com/wladyDE/tic-tac-toe'
   },
   {
     id: 3,
-    image: IMG3,
-    title: 'Crypto connect',
-    github: ''
+    image: KingGymImg,
+    title: 'King`s Gym',
+    github: 'https://github.com/wladyDE/fitness_club/tree/master'
   },
   {
     id: 4,
-    image: IMG4,
-    title: 'Crypto connect',
-    github: ''
+    image: MarvelImg,
+    title: 'Marvel',
+    github: 'https://github.com/wladyDE/marvel'
   },
   {
     id: 5,
-    image: IMG5,
-    title: 'Crypto connect',
-    github: ''
+    image: DataServImg,
+    title: 'DataServe',
+    github: 'https://github.com/wladyDE/server-socket/tree/master'
   },
+  {
+    id: 6,
+    image: SkinportImg,
+    title: 'Web Scrapers',
+  }
 ]
 
-const Portfolio = ({language : {portfolio}}) => {
+const Portfolio = ({ language: { portfolio } }) => {
   return (
     <section id='portfolio'>
       <h5>{portfolio.recentWork}</h5>
@@ -54,8 +61,7 @@ const Portfolio = ({language : {portfolio}}) => {
               </div>
               <h3>{title}</h3>
               <div className="portfolio__item-cta">
-                <a href={github} className='btn' target='_blank'>Github</a>
-                <a href={demo} target='_blank' className='btn btn-primary'>Live Demo</a>
+                {github && <a href={github} className='btn btn-primary' target='_blank'>Github</a>}
               </div>
             </article>)
           })

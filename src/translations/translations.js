@@ -25,7 +25,7 @@ export const eng = {
         intermediate : "Intermediate",
     }, 
     portfolio : {
-        recentWork : "My Recent Work"
+        recentWork : "My Recent Works"
     },
     contact : {
         getInTouch : "Get In Touch",

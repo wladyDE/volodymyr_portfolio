@@ -49,7 +49,7 @@
     overflow: hidden;
     margin-top: 4rem;
     border-radius: 12rem 12rem 0 0;
-    padding: 5rem 1.5rem 1.5rem 1.5rem;
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
 
 /* ============= SCROLL DOWN ============= */
@@ -72,7 +72,10 @@
     overflow: hidden;
     cursor: pointer;
     width: 8rem;
-    margin: 0 auto 1rem auto; 
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
   }
   
   .language-switch__option {
