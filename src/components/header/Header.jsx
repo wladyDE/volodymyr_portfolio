@@ -7,6 +7,7 @@ import './header.css'
 
 const Header = ({setActiveNav, language, setLanguage}) => {
   const {header} = language; 
+  const scrollStyle = language.value === 'eng' ? engScrollStyles : deScrollStyles;  
 
   return (
     <header className='header' id='header'>
@@ -22,7 +23,7 @@ const Header = ({setActiveNav, language, setLanguage}) => {
         </div>
 
         <HeaderSocials />
-        <a href="#contact" className='scroll__down' onClick={() => setActiveNav('#contact')}>{header.scrollDown}</a>
+        <a href="#contact" className='scroll__down' style={scrollStyle} onClick={() => setActiveNav('#contact')}>{header.scrollDown}</a>
 
 
       </div>
@@ -45,3 +46,13 @@ const LanguageSwitch = ({ language, setLanguage }) => {
 };
 
 export default Header
+
+const engScrollStyles = {
+  right: "-2.3rem",
+  bottom: "5rem" 
+}
+
+const deScrollStyles = {
+  right: "-3.8rem",
+  bottom: "6rem" 
+}

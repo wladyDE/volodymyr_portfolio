@@ -22,6 +22,10 @@
     transform: rotate(0);
 }
 
+.about__me-img img{
+    height: 120%;
+}
+
 .about__cards{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
